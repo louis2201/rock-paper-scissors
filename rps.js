@@ -1,12 +1,19 @@
 console.log("Hello World!");
 
-function getComputerChoice(rock, paper, scissors) {
-    if(Math.floor(Math.random() * rock, paper, scissors === 0)){
+function getComputerChoice() {
+    const randomNumber = Math.floor(Math.random() * 3);
+    if(randomNumber === 0) {
         return "Rock";
-    } else if (Math.floor(Math.random() * rock, paper, scissors === 1)) {
+    } else if(randomNumber === 1) {
         return "Paper";
     } else {
         return "Scissors";
     }
 }
-console.log(getComputerChoice(3));
+console.log(getComputerChoice());
+
+function getHumanChoice() {
+    const userChoice = prompt("Enter your choice: Rock, Paper, or Scissors");
+    return userChoice;
+}
+console.log(getHumanChoice());
